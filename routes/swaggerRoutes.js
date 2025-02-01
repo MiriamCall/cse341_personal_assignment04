@@ -3,8 +3,8 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("../swagger.json");
 
 if (process.env.NODE_ENV === "development") {
-  swaggerDocuments.host = "localhost:8080";
-  swaggerDocuments.schemes = ["http"];
+  swaggerDocument.host = "localhost:8080";
+  swaggerDocument.schemes = ["http"];
 }
 
 // Swagger UI Route
