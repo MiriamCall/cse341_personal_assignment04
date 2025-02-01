@@ -1,4 +1,5 @@
 // Import Statements
+const cors = require("cors");
 const express = require("express");
 const dotenv = require("dotenv");
 dotenv.config();
@@ -9,17 +10,13 @@ const app = express();
 
 // middleware
 app.use(express.json());
+app.use(cors());
 
 // Connect to Database
 connectToDatabase(process.env.DB_NAME);
 
 // Routes
-app
-  .use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    next();
-  })
-  .use("/", require("./routes"));
+app.use("/", require("./routes"));
 
 // Server (Listen)
 
