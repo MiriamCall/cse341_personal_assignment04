@@ -5,8 +5,8 @@ const doc = {
     title: "CSE 341 API Docs",
     description: "CSE 341 API Documentation",
   },
-  host: "localhost:8080",
-  schemes: ["http"],
+  host: "https://cse341-personal-assignment04.onrender.com",
+  schemes: ["https"],
 };
 
 const outputFile = "./swagger.json";
