@@ -7,9 +7,7 @@
   },
   "host": "https://cse341-personal-assignment04.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["http"],
   "paths": {
     "/contacts/": {
       "get": {
