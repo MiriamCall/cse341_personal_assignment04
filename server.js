@@ -14,7 +14,12 @@ app.use(express.json());
 connectToDatabase(process.env.DB_NAME);
 
 // Routes
-app.use("/", require("./routes"));
+app
+  .use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+  })
+  .use("/", require("./routes"));
 
 // Server (Listen)
 
