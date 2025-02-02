@@ -19,11 +19,6 @@ connectToDatabase(process.env.DB_NAME);
 app.use("/", require("./routes"));
 
 // Server (Listen)
-
-// app.listen(port, () => {
-//   console.log(`Server running on port ${port}`);
-// });
-
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}\n`);
   if (process.env.NODE_ENV === "development") {
@@ -31,7 +26,3 @@ app.listen(process.env.PORT, () => {
     console.log(`>> http://localhost:${process.env.PORT}/api-docs\n`);
   }
 });
-// localhost
-// app.listen(port, host, () => {
-//   console.log(`Server is running on http://${host}:${port}`);
-// });
